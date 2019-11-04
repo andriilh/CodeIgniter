@@ -1,3 +1,8 @@
 .nama {
 	color: salmon;
 }
+
+.btn-simple {
+	background-color: lightgreen;
+	padding: 10px;
+}

@@ -3,22 +3,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Myadmin extends CI_Controller
 {
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->database();
+		$this->load->model('M_admin');
+	}
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
 		$data['title'] = "Admin Page";
@@ -30,8 +21,8 @@ class Myadmin extends CI_Controller
 	public function tambahdata()
 	{
 		$data['title'] = "Tambah Data";
-		$this->load->view('modul/headadm', $data);
-		$this->load->view("modulcrud/tambahdata");
+		$data['tampil'] = $this->M_admin->tampil_data();
+		$this->load->view('modulcrud/tambahdata', $data);
 		$this->load->view('modul/footadm');
 	}
 
@@ -39,12 +30,12 @@ class Myadmin extends CI_Controller
 	{
 		$nama = $this->input->post('nama');
 		$npm = $this->input->post('npm');
-		$smstr = $this->input->post('semester');
+		$semester = $this->input->post('semester');
 
 		$data = array(
-			'npm' => $nama,
-			'nama' => $npm,
-			'semester' => $smstr
+			'npm' => $npm,
+			'nama' => $nama,
+			'semester' => $semester,
 		);
 
 		$this->M_admin->tambah_data('data_mahasiswa', $data);

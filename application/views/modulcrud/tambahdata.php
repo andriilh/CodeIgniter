@@ -5,8 +5,31 @@
    <input type="text" name="nama" placeholder="Masukkan nama lengkap">
    <select name="semester" id="">
       <?php for ($i = 1; $i < 10; $i++) { ?>
-         <option value=""><?= $i; ?></option>
+         <option value="<?= $i; ?>"><?= $i; ?></option>
       <?php } ?>
    </select>
    <button type="submit">Submit</button>
 </form>
+
+<table>
+   <thead>
+      <tr>
+         <th>No</th>
+         <th>NPM</th>
+         <th>Nama</th>
+         <th>Semester</th>
+      </tr>
+   </thead>
+   <tbody>
+      <?php $no = 1;
+      foreach ($tampil as $tpl) : ?>
+         <tr>
+            <td><?= $no; ?></td>
+            <td><?= $tpl->npm; ?></td>
+            <td><?= $tpl->nama; ?></td>
+            <td><?= $tpl->semester; ?></td>
+         </tr>
+      <?php $no++;
+      endforeach; ?>
+   </tbody>
+</table>
