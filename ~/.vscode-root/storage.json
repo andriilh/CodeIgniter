@@ -1396,9 +1396,10 @@
     "themeBackground": "#263238",
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/opt/lampp/htdocs/CodeIgniter/~/.vscode-root/Backups/1575859660914",
+            "folder": "file:///opt/lampp/htdocs/CodeIgniter",
+            "backupPath": "/opt/lampp/htdocs/CodeIgniter/~/.vscode-root/Backups/c5d28c0d797f3f46f2c08b17b0482f79",
             "uiState": {
-                "mode": 1,
+                "mode": 0,
                 "x": 171,
                 "y": 54,
                 "width": 1024,
