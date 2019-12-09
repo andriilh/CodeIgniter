@@ -40,4 +40,14 @@ class Myadmin extends CI_Controller
 
 		$this->M_admin->tambah_data('data_mahasiswa', $data);
 	}
+
+	public function edit_data($id)
+	{
+		$where = array('id'=> $id);
+		$data["title"] = "EDIT DATA";
+		$data['datamhs'] = $this->M_admin->edit_data($where,'data_mahasiswa')->result();
+		$this->load->view('modul/headadm', $data);
+		$this->load->view('modul/editadm',$data);
+		$this->load->view('modul/footadm');
+	}
 }
