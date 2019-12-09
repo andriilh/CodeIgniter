@@ -1,0 +1,18 @@
+[2019-12-09 09:47:44.580] [exthost] [info] extension host started
+[2019-12-09 09:47:44.607] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2019-12-09 09:47:44.608] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-12-09 09:47:44.618] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2019-12-09 09:47:44.618] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/emmet/dist/extension
+[2019-12-09 09:47:44.679] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.git","_lower":"vscode.git"},"activationEvent":"*"}
+[2019-12-09 09:47:44.679] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/git/dist/main
+[2019-12-09 09:47:44.771] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2019-12-09 09:47:44.771] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2019-12-09 09:47:44.776] [exthost] [info] ExtensionService#_doActivateExtension Equinusocio.vsc-material-theme {"startup":true,"extensionId":{"value":"Equinusocio.vsc-material-theme","_lower":"equinusocio.vsc-material-theme"},"activationEvent":"*"}
+[2019-12-09 09:47:44.777] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/andri/.vscode/extensions/equinusocio.vsc-material-theme-30.0.0/out/src/material.theme.config
+[2019-12-09 09:47:44.793] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme {"startup":true,"extensionId":{"value":"PKief.material-icon-theme","_lower":"pkief.material-icon-theme"},"activationEvent":"*"}
+[2019-12-09 09:47:44.794] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/andri/.vscode/extensions/pkief.material-icon-theme-3.9.2/dist/extension
+[2019-12-09 09:47:44.835] [exthost] [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer {"startup":true,"extensionId":{"value":"ritwickdey.LiveServer","_lower":"ritwickdey.liveserver"},"activationEvent":"*"}
+[2019-12-09 09:47:44.836] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/andri/.vscode/extensions/ritwickdey.liveserver-5.6.1/out/src/extension
+[2019-12-09 09:47:45.500] [exthost] [info] ExtensionService#_doActivateExtension Zignd.html-css-class-completion {"startup":true,"extensionId":{"value":"Zignd.html-css-class-completion","_lower":"zignd.html-css-class-completion"},"activationEvent":"*"}
+[2019-12-09 09:47:45.500] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/andri/.vscode/extensions/zignd.html-css-class-completion-1.19.0/out/src/extension
+[2019-12-09 09:47:46.176] [exthost] [info] eager extensions activated

@@ -50,4 +50,10 @@ class Myadmin extends CI_Controller
 		$this->load->view('modul/editadm',$data);
 		$this->load->view('modul/footadm');
 	}
+
+	public function aksi_edit_data()
+	{
+		$nama = $this->input->post('nama');
+		$npm = $this->input->post('npm');
+	}
 }
