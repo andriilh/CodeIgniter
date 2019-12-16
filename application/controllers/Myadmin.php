@@ -22,8 +22,9 @@ class Myadmin extends CI_Controller
 	{
 		$data['title'] = "Tambah Data";
 		$data['tampil'] = $this->M_admin->tampil_data();
-		$this->load->view('modulcrud/tambahdata', $data);
-		$this->load->view('modul/footadm');
+		$this->load->view('modul/headadm', $data);
+		$this->load->view('modulcrud/tambahdata');
+		// $this->load->view('modul/footadm');
 	}
 
 	public function aksi_tambahdata()
@@ -39,6 +40,7 @@ class Myadmin extends CI_Controller
 		);
 
 		$this->M_admin->tambah_data('data_mahasiswa', $data);
+		redirect("Myadmin/tambahdata");
 	}
 
 	public function edit_data($id)
