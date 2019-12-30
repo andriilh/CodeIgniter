@@ -68,5 +68,6 @@ class Myadmin extends CI_Controller
 			'nama' => $nama,
 			'semester' => $semester,
 		);
+		
 	}
 }
