@@ -58,4 +58,30 @@ class Login extends CI_Controller
 		$this->session->sess_destroy();
 		redirect('login');
 	}
+
+	// register
+	public function register_view()
+	{
+		$data['title'] = "Registrasi";
+		$this->load->view('modul/headadm', $data);
+		$this->load->view("registrasi");
+		$this->load->view('modul/js-bootstrap');
+	}
+
+	public function register_aksi()
+	{
+		$username = $this->input->post("username");
+		$nama = $this->input->post("nama");
+		$pass = $this->input->post("password");
+		$type = $this->input->post("options");
+		$data = array(
+			'nama' => $nama,
+			'username' => $username,
+			'password' => $pass,
+			'type' => $type
+		);
+		$this->M_login->tambah_data("login", $data);
+		redirect("login");
+	}
+
 }

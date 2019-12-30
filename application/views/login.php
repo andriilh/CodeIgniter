@@ -8,5 +8,7 @@
             <input type="password" name="password" id="" class="form-control mt-3" placeholder="Password">
             <button type="submit" class="btn btn-outline-success mt-3">Login</button>
         </form>
+
+        <p class="mt-3">Belum memiliki akun? <a class="font-weight-bold" href="<?= site_url("login/register_view"); ?>">Registrasi</a></p>
     </div>
 </div>
