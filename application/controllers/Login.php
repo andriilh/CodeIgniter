@@ -12,10 +12,13 @@ class Login extends CI_Controller
 
 	public function index()
 	{
+		if($this->session->userdata('status') == 'login') {
+			redirect('myadmin');
+		}
+
 		$data['title'] = "Admin Page";
 		$this->load->view('modul/headadm', $data);
-		$this->load->view("dashboard");
-		$this->load->view('modul/footadm');
+		$this->load->view("login");
     }
     
     public function login_view(){
@@ -27,27 +30,32 @@ class Login extends CI_Controller
 
 	public function login_aksi()
 	{
-		$username = $this->input->post("username");
+		$user = $this->input->post("username");
 		$pass = $this->input->post("password");
 
 		$where = array(
-			'username' => $username,
-			'password' => $pass,
+			'username' => $user,
+			'password' => $pass
 		);
-		$cek = $this->M_login->cek_login("login", $where);
-		if ($cek > 0) {
 
+		$cek = $this->M_login->cek_login('login',$where)->num_rows();
+		if($cek > 0) {
 			$data_session = array(
-				'username' => $username,
-				'status' => "login"
+				'nama' => $user,
+				'status' => 'login'
 			);
 
 			$this->session->set_userdata($data_session);
-
-			redirect("Myadmin");
+			redirect("myadmin");
 		} else {
-			echo "Username dan password salah !";
+			$this->session->set_flashdata('message', 'Username atau Password salah!');
+			redirect('login');
 		}
 	}
 
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect('login');
+	}
 }

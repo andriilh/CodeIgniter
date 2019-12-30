@@ -10,4 +10,9 @@ class M_admin extends CI_Model
    {
       return $this->db->get("data_mahasiswa")->result();
    }
+
+   public function edit_data($table, $data) 
+   {
+      return $this->db->update($table, $data);
+   }
 }

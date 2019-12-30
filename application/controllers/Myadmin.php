@@ -8,6 +8,10 @@ class Myadmin extends CI_Controller
 		parent::__construct();
 		$this->load->database();
 		$this->load->model('M_admin');
+
+		if($this->session->userdata('status') != 'login') {
+			redirect("Login");
+		}
 	}
 
 	public function index()
@@ -22,9 +26,9 @@ class Myadmin extends CI_Controller
 	{
 		$data['title'] = "Tambah Data";
 		$data['tampil'] = $this->M_admin->tampil_data();
-		$this->load->view('modul/headadm', $data);
+		$this->load->view('modul/headadm',$data);
 		$this->load->view('modulcrud/tambahdata');
-		// $this->load->view('modul/footadm');
+		$this->load->view('modul/footadm');
 	}
 
 	public function aksi_tambahdata()
@@ -47,9 +51,9 @@ class Myadmin extends CI_Controller
 	{
 		$where = array('id'=> $id);
 		$data["title"] = "EDIT DATA";
-		$data['datamhs'] = $this->M_admin->edit_data($where,'data_mahasiswa')->result();
+		$data['datamhs'] = $this->M_admin->edit_data('data_mahasiswa', $where)->result();
 		$this->load->view('modul/headadm', $data);
-		$this->load->view('modul/editadm',$data);
+		$this->load->view('modul/editadm',$id);
 		$this->load->view('modul/footadm');
 	}
 
@@ -57,5 +61,12 @@ class Myadmin extends CI_Controller
 	{
 		$nama = $this->input->post('nama');
 		$npm = $this->input->post('npm');
+		$semester = $this->input->post('semester');
+
+		$data = array(
+			'npm' => $npm,
+			'nama' => $nama,
+			'semester' => $semester,
+		);
 	}
 }
