@@ -2,6 +2,8 @@
    <div class="shadow-lg p-5 mb-5 bg-white rounded">
       <h1 class="font-weight-bold text-center">Tambah data</h1>
 
+      <a href="<?= base_url("Myadmin"); ?>" class="btn btn-success mb-3">Kembali</a>
+
       <form action="<?= base_url('Myadmin/aksi_tambahdata'); ?>" method="post">
          <div class="form-group">
          <label class="mt-2">NPM</label>   
@@ -37,8 +39,8 @@
                   <td><?= $tpl->nama; ?></td>
                   <td>Semester <?= $tpl->semester; ?></td>
                   <td>
-                     <a href="<?php echo site_url("Myadmin/edit_data".$tpl->id); ?>" class="btn btn-success btn-sm">Edit</a>
-                     <a href="#" class="btn btn-danger btn-sm">Hapus</a>
+                     <a href="<?= site_url("Myadmin/edit_data/".$tpl->id); ?>" class="btn btn-success btn-sm">Edit</a>
+                     <a href="<?= site_url("myadmin/hapus/".$tpl->id); ?>" class="btn btn-danger btn-sm">Hapus</a>
                   </td>
                </tr>
             <?php $no++;

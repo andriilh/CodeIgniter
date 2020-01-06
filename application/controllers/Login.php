@@ -19,20 +19,14 @@ class Login extends CI_Controller
 		$data['title'] = "Admin Page";
 		$this->load->view('modul/headadm', $data);
 		$this->load->view("login");
+		$this->load->view('modul/js-bootstrap');
     }
-    
-    public function login_view(){
-        $data['title'] = "Login";
-		$this->load->view('modul/headadm', $data);
-		$this->load->view("login");
-	}
 	
 
 	public function login_aksi()
 	{
 		$user = $this->input->post("username");
 		$pass = $this->input->post("password");
-
 		$where = array(
 			'username' => $user,
 			'password' => $pass
